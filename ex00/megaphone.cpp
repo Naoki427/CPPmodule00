@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yoshiminaoki <yoshiminaoki@student.42.f    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 19:54:48 by yoshiminaok       #+#    #+#             */
-/*   Updated: 2024/09/26 20:55:03 by yoshiminaok      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <iostream>
 
 int main(int argc,char **argv)
@@ -19,7 +7,7 @@ int main(int argc,char **argv)
 
     i = 1;
     if(argc == 1)
-        std::cout<<"SCREEEEEEEEECH!";
+        std::cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *";
     while(i < argc)
     {
         j = 0;
