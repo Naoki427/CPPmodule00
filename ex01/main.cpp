@@ -6,10 +6,11 @@ int main()
     Contact tmp;
     std::string input;
 
-    phonebook.setIndex(0);
+    phonebook.setIndex(1);
+    phonebook.setSize(1);
     while(1)
     {
-        std::cout << ">";
+        std::cout << "> ";
         std::getline(std::cin,input);
         if(input == "EXIT")
             break;
@@ -32,7 +33,11 @@ int main()
             tmp.setSecret(input);
             phonebook.setContact(tmp);
             std::cout << "Contact input successful!" << std::endl;
-            phonebook.setIndex(phonebook.getIndex() + 1);
+            if (phonebook.getIndex() == 8)
+                phonebook.setIndex(1);
+            else
+                phonebook.setIndex(phonebook.getIndex() + 1);
+            phonebook.setSize(phonebook.getSize()+1);
         }
         else if (input == "SEARCH")
         {
