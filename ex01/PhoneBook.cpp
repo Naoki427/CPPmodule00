@@ -57,9 +57,9 @@ void    PhoneBook::display_phonebook()
         size = 8;
     else
         size = this->size - 1;
-	// std::cout <<  "+----------+----------+----------+----------+"<< std::endl;
+	std::cout <<  "+----------+----------+----------+----------+"<< std::endl;
 	std::cout <<  "|     index|first name| last name|  nickname|"<< std::endl;
-	// std::cout <<  "+----------+----------+----------+----------+"<< std::endl;
+	std::cout <<  "+----------+----------+----------+----------+"<< std::endl;
     while(i < size)
     {
         std::cout <<  "|         ";
@@ -72,5 +72,29 @@ void    PhoneBook::display_phonebook()
         put_attribute(this->contacts[i].getNickname());
         std::cout <<  "|" << std::endl;
         i++;
+    }
+	std::cout <<  "+----------+----------+----------+----------+\n"<< std::endl;
+    display_contact();
+}
+
+void    PhoneBook::display_contact()
+{
+    int index;
+
+    while (1)
+    {
+        std::cout << "Please enter the Conact ID: " ;
+        std::cin >> index;
+        if (std::cin.eof())
+            std::exit(0);
+        if (std::cin.fail() || index <= 0 || index >= this->size )
+        {
+            std::cout << "Invalid Index!\n" << std::endl;
+            std::cin.clear();
+            continue;
+        } else {
+            this->contacts[index-1].printallinfo(index);
+            break;
+        }
     }
 }

@@ -19,6 +19,7 @@ public:
     int     getIndex();
     int     getSize();
     void    display_phonebook();
+    void    display_contact();
 };
 
 #endif

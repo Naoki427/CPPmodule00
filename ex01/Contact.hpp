@@ -1,6 +1,7 @@
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 #include <string>
+#include <iostream>
 class Contact
 {
 private:
@@ -22,6 +23,7 @@ public:
     std::string getNickname();
     std::string getPhonenumber();
     std::string getSeret();
+    void	printallinfo(int i);
 };
 
 

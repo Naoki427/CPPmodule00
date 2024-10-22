@@ -1,5 +1,19 @@
 #include "PhoneBook.hpp"
 
+static void input_str(std::string *input,std::string message)
+{
+    while (1)
+    {
+        std::cout << message;
+        std::getline(std::cin,*input);
+        if (!(*input).empty())
+            break;
+        else if (std::cin.eof())
+            std::exit(0);
+        std::cout << "Error: No input detected. Please try again." << std::endl;
+    }
+}
+
 int main()
 {
     PhoneBook phonebook;
@@ -10,26 +24,20 @@ int main()
     phonebook.setSize(1);
     while(1)
     {
-        std::cout << "> ";
         std::getline(std::cin,input);
         if(input == "EXIT")
             break;
         else if(input == "ADD")
         {
-            std::cout << "first name: ";
-            std::getline(std::cin,input);
+            input_str(&input,"first name: ");
             tmp.setFirstname(input);
-            std::cout << "last name: ";
-            std::getline(std::cin,input);
+            input_str(&input,"last name: ");
             tmp.setLastname(input);
-            std::cout << "nickname: ";
-            std::getline(std::cin,input);
+            input_str(&input,"nickname: ");
             tmp.setNickname(input);
-            std::cout << "phone number: ";
-            std::getline(std::cin,input);
+            input_str(&input,"phone number: ");
             tmp.setPhonenumber(input);
-            std::cout << "darkest secret: ";
-            std::getline(std::cin,input);
+            input_str(&input,"darkest secret: ");
             tmp.setSecret(input);
             phonebook.setContact(tmp);
             std::cout << "Contact input successful!" << std::endl;

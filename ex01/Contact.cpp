@@ -48,3 +48,12 @@ std::string Contact::getSeret()
 {
     return (this->secret);
 }
+
+void	Contact::printallinfo(int i) {
+	std::cout << " First Name: " << this->first_name << std::endl;
+	std::cout << " Last Name: " <<  this->last_name << std::endl;
+	std::cout << " NickName: " << this->nick_name<< std::endl;
+	std::cout << " Phone Number: " << this->phone_number << std::endl;
+	std::cout << " Darkest Secret: " << this->secret<< std::endl;
+	std::cout << " Index: " << i << "\n" << std::endl;
+}
