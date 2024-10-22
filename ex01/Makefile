@@ -1,7 +1,7 @@
 NAME = phonebook
-CC = c++
-CFLAGS = -Wall -Werror -Wextra
-# CFLAGS += -std=98
+CXX = c++
+CXXFLAGS = -Wall -Werror -Wextra
+# CXXFLAGS += -std=98
 
 SRC = 	PhoneBook.cpp \
 		Contact.cpp \
@@ -12,10 +12,10 @@ OBJ = $(SRC:.cpp=.o)
 RM = rm -rf
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
 
 all: $(NAME)
 

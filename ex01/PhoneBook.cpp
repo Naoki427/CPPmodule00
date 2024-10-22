@@ -29,7 +29,7 @@ int     PhoneBook::getSize()
 
 void    put_attribute(std::string str)
 {
-    int i;
+    size_t i;
 
     i = 0;
     if (str.length() >= 10)
