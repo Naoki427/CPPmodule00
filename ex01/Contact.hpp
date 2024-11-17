@@ -2,6 +2,7 @@
 #define CONTACT_HPP
 #include <string>
 #include <iostream>
+#include <cstdlib> 
 class Contact
 {
 private:
@@ -11,14 +12,12 @@ private:
     std::string phone_number;
     std::string secret;
 public:
-    // Contact ();
-    // ~Contact ();
     void    setFirstname(std::string value);
     void    setLastname(std::string value);
     void    setNickname(std::string value);
     void    setPhonenumber(std::string value);
     void    setSecret(std::string value);
-    std::string getFirstname(); //&? const?
+    std::string getFirstname();
     std::string getLastname();
     std::string getNickname();
     std::string getPhonenumber();

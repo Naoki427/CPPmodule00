@@ -21,7 +21,7 @@ int main()
     std::string input;
 
     phonebook.setIndex(1);
-    phonebook.setSize(1);
+    phonebook.setSize(0);
     while(1)
     {
         std::getline(std::cin,input);
@@ -45,7 +45,8 @@ int main()
                 phonebook.setIndex(1);
             else
                 phonebook.setIndex(phonebook.getIndex() + 1);
-            phonebook.setSize(phonebook.getSize()+1);
+            if(phonebook.getSize() != 8)
+                phonebook.setSize(phonebook.getSize()+1);
         }
         else if (input == "SEARCH")
         {

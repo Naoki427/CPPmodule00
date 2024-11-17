@@ -50,17 +50,12 @@ void    put_attribute(std::string str)
 void    PhoneBook::display_phonebook()
 {
     int i;
-    int size;
 
     i = 0;
-    if(this->size > 8)
-        size = 8;
-    else
-        size = this->size - 1;
 	std::cout <<  "+----------+----------+----------+----------+"<< std::endl;
 	std::cout <<  "|     index|first name| last name|  nickname|"<< std::endl;
 	std::cout <<  "+----------+----------+----------+----------+"<< std::endl;
-    while(i < size)
+    while(i < this->size)
     {
         std::cout <<  "|         ";
         std::cout <<  i + 1;
@@ -87,10 +82,11 @@ void    PhoneBook::display_contact()
         std::cin >> index;
         if (std::cin.eof())
             std::exit(0);
-        if (std::cin.fail() || index <= 0 || index >= this->size )
+        if (std::cin.fail() || index <= 0 || index > this->size )
         {
             std::cout << "Invalid Index!\n" << std::endl;
             std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
             continue;
         } else {
             this->contacts[index-1].printallinfo(index);

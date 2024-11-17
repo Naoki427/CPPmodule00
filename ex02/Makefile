@@ -1,12 +1,11 @@
-NAME = phonebook
+NAME = ex02
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra
 CXXFLAGS += -std=c++98
 # CXXFLAGS += -fsanitize=address -g
 
-SRC = 	PhoneBook.cpp \
-		Contact.cpp \
-		main.cpp
+SRC =	tests.cpp \
+		Account.cpp \
 
 OBJ = $(SRC:.cpp=.o)
 

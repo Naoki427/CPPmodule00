@@ -2,6 +2,7 @@
 #define PHONEBOOK_HPP
 #include "Contact.hpp"
 #include <iostream>
+#include <limits>
 class PhoneBook
 {
 private:
@@ -10,8 +11,6 @@ private:
     int     size;
 
 public:
-    // PhoneBook();
-    // ~PhoneBook();
     void    setContact(Contact value);
     void    setIndex(int value);
     void    setSize(int value);
